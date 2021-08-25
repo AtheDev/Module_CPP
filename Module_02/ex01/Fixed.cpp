@@ -5,13 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 22:30:19 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/22 18:00:51 by adupuy           ###   ########.fr       */
+/*   Created: 2021/08/19 23:56:12 by adupuy            #+#    #+#             */
+/*   Updated: 2021/08/24 11:37:42 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <iostream>
+#include <cmath>
 
 Fixed::Fixed(void): _fixedPointValue(0) {
 
@@ -24,12 +25,24 @@ Fixed::Fixed(Fixed const & cpy) {
 	*this = cpy;
 }
 
+Fixed::Fixed(int const value) {
+
+	std::cout << "Int constructor called" << std::endl;
+	this->_fixedPointValue = value << _nbFractionalBits;
+}
+
+Fixed::Fixed(float const value) {
+
+	std::cout << "Float constructor called" << std::endl;
+	this->_fixedPointValue = roundf(value * (1 << _nbFractionalBits));
+}
+
 Fixed::~Fixed(void) {
 
 	std::cout << "Destructor called" << std::endl;
 }
 
-Fixed &		Fixed::operator=(Fixed const & rhs) {
+Fixed &	Fixed::operator=(Fixed const & rhs) {
 
 	std::cout << "Assignation operator called" << std::endl;
 	this->_fixedPointValue = rhs.getRawBits();
@@ -38,13 +51,29 @@ Fixed &		Fixed::operator=(Fixed const & rhs) {
 
 int			Fixed::getRawBits(void) const {
 
-	std::cout << "getRawBits member function called" << std::endl;
-	return this->_fixedPointValue;
+	return (this->_fixedPointValue);
 }
 
 void		Fixed::setRawBits(int const raw) {
 
 	this->_fixedPointValue = raw;
+}
+
+int			Fixed::toInt(void) const {
+
+	return (this->_fixedPointValue >> _nbFractionalBits);
+}
+
+float		Fixed::toFloat(void) const {
+
+
+	return (roundf(this->_fixedPointValue) / (1 << _nbFractionalBits));
+}
+
+std::ostream &	operator<<(std::ostream & lhs, Fixed const & rhs) {
+
+	lhs << rhs.toFloat();
+	return lhs;
 }
 
 int const	Fixed::_nbFractionalBits = 8;

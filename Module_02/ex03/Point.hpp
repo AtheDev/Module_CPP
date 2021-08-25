@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Point.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/19 22:30:08 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/22 17:58:37 by adupuy           ###   ########.fr       */
+/*   Created: 2021/08/24 14:43:26 by adupuy            #+#    #+#             */
+/*   Updated: 2021/08/25 13:50:49 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_H
-# define FIXED_H
+#ifndef POINT_H
+# define POINT_H
 
-class	Fixed {
+# include "Fixed.hpp"
+
+class	Point {
 
 	public:
 
-		Fixed(void);
-		Fixed(Fixed const & cpy);
-		~Fixed(void);
+		Point(void);
+		Point(Point const & cpy);
+		Point(float const lhs, float const rhs);
+		~Point(void);
 
-		Fixed &		operator=(Fixed const & rhs);
+		Point &	operator=(Point const & rhs);
 
-		int			getRawBits(void) const;
-		void		setRawBits(int const raw);
+		Fixed	getX(void) const;
+		Fixed 	getY(void) const;
 
 	private:
 
-		int		_fixedPointValue;
-
-		static const int	_nbFractionalBits;
-
+		Fixed const	x;
+		Fixed const	y;
 };
 
 #endif
