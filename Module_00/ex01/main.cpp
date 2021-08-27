@@ -6,13 +6,12 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 14:32:09 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/17 14:50:50 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/08/27 14:42:03 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
 #include "Phonebook.hpp"
+#include "Contact.hpp"
 
 
 void	commandSearch(Phonebook phonebook)
@@ -23,19 +22,19 @@ void	commandSearch(Phonebook phonebook)
 		int			iIndex;
 		phonebook.searchContact();
 		std::cout << std::endl
-			<< "\033[34mSaisissez l'index du contact à visualiser : \033[37m";
+			<< "\033[34mEnter the index of the contact to be viewed : \033[37m";
 		std::getline(std::cin, sIndex);
 		while ((iIndex = phonebook.setIndex(sIndex)) == -1)
 		{
 			std::cout << std::endl
-				<< "\033[31mVeuillez saisir un index correct : \033[37m";
+				<< "\033[31mPlease enter a correct index : \033[37m";
 			std::getline(std::cin, sIndex);
 		}
 		phonebook.printContact(iIndex);
 	}
 	else
-		std::cout << std::endl << "\033[31mRecherche impossible, "
-			<< "votre annuaire est actuellement vide.\033[37m"
+		std::cout << std::endl << "\033[31mSearch not possible, "
+			<< "your directory is currently empty.\033[37m"
 			<< std::endl;
 }
 
@@ -48,8 +47,8 @@ void	commandAdd(Phonebook &phonebook)
 	}
 	else
 		std::cout << std::endl
-			<< "\033[31mVous ne pouvez plus ajouter de contact, "
-			<< "votre annuaire est complet.\033[37m" << std::endl;
+			<< "\033[31mYou cannot add any more contacts, "
+			<< "your directory is full.\033[37m" << std::endl;
 }
 
 int	main(int ac, char **av)
@@ -60,11 +59,11 @@ int	main(int ac, char **av)
 	{
 		Phonebook	phonebook;
 		std::string	input;
-		std::cout << "\033[32m********** Bienvenue dans mon PHONEBOOK ! **********\033[37m"
+		std::cout << "\033[32m********** Welcome in my PHONEBOOK ! **********\033[37m"
 			<< std::endl;
 		do {
 			std::cout << std::endl
-				<< "\033[34mVeuillez saisir une commande parmis "
+				<< "\033[34mPlease enter one of the following commands "
 				<< "ADD / SEARCH / EXIT :\033[37m"
 				<< std::endl;
 			std::getline(std::cin, input);
@@ -74,13 +73,13 @@ int	main(int ac, char **av)
 				commandSearch(phonebook);
 			else if (phonebook.setInput(input) == 0)
 				std::cout << std::endl
-					<< "\033[31mMauvaise commande!\033[37m" << std::endl;
+					<< "\033[31mWrong command!\033[37m" << std::endl;
 		} while (phonebook.setInput(input) != 1);
-		std::cout << std::endl
-			<< "\033[32mTous vos contacts sont supprimés. A bientôt !\033[37m"
-			<< std::endl;
+		if (Contact::getNbContact() != 0)
+			std::cout << std::endl << "\033[32mAll your contacts are deleted. \033[37m";
+		std::cout << "\033[32mSee you soon!\033[37m" << std::endl;
 	}
 	else
-		std::cerr << "\033[31mTrop d'argument!\033[37m" << std::endl;
+		std::cerr << "\033[31mToo many arguments!\033[37m" << std::endl;
 	return 0;
 }

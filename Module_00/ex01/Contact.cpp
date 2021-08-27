@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.class.cpp                                  :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 14:41:38 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/17 14:51:15 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/08/27 14:15:53 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 Contact::Contact(void) {
 
-	// Constructon d'une instance Contact de la class Contact
 }
 
 Contact::~Contact(void) {
 
-	// Destruction d'une l'instance Contact de a classe Contact
 }
 
 
@@ -32,10 +30,11 @@ std::string	Contact::getFirstName(void) const {
 int		Contact::setFirstName(std::string str) {
 
 	if (str.empty() ||
-		(str.find_first_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_-")
+		(str.find_first_of(
+		"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_-")
 		 == std::string::npos))
 	{
-		std::cout << "\033[31mVeuillez remplir ce champ !\033[37m"
+		std::cout << "\033[31mPlease fill in this field !\033[37m"
 			<< std::endl << "\033[33m-> First name : \033[37m";
 		return (1);
 	}
@@ -54,10 +53,11 @@ std::string	Contact::getLastName(void) const {
 int		Contact::setLastName(std::string str) {
 
 	if (str.empty() ||
-		(str.find_first_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_-")
+		(str.find_first_of(
+		"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_-")
 		 == std::string::npos))
 	{
-		std::cout << "\033[31mVeuillez remplir ce champ !\033[37m"
+		std::cout << "\033[31mPlease fill in this field !\033[37m"
 			<< std::endl << "\033[33m-> Last name : \033[37m";
 		return (1);
 	}
@@ -76,10 +76,11 @@ std::string	Contact::getNickname(void) const {
 int	Contact::setNickname(std::string str) {
 
 	if (str.empty() ||
-		(str.find_first_of("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_-")
+		(str.find_first_of(
+		"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890_-")
 		 == std::string::npos))
 	{
-		std::cout << "\033[31mVeuillez remplir ce champ !\033[37m"
+		std::cout << "\033[31mPlease fill in this fild !\033[37m"
 			<< std::endl << "\033[33m-> Nickname : \033[37m";
 		return (1);
 	}
@@ -99,8 +100,8 @@ int	Contact::setPhoneNumber(std::string str) {
 
 	if (str.find_first_not_of("0123456789") != std::string::npos)
 	{
-		std::cout << "\033[31mVotre numéro de téléphone ne doit comporter que "
-			<< "des chiffres sinon laissez le champ vide.\033[37m"
+		std::cout << "\033[31mYour phone number must be in digits only "
+			<< "or leave the field blank.\033[37m"
 			<< std::endl << "\033[33m-> Phone number : \033[37m";
 		return (1);
 	}
@@ -122,7 +123,7 @@ void	Contact::setDarkestSecret(std::string str) {
 }
 
 
-// Nombre de contact
+// Number of contact
 int	Contact::getNbContact(void) {
 
 	return Contact::_nbContact;

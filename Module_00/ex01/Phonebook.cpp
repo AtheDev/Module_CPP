@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.class.cpp                                :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 15:22:05 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/17 14:51:06 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/08/27 14:20:11 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,10 @@
 
 Phonebook::Phonebook(void) {
 
-	// Construction d'une instance Phonebook de la class Phonebook
 }
 
 Phonebook::~Phonebook(void) {
 
-	// Destruction d'une instance Phonebook de la class Phonebook
 }
 
 int		Phonebook::setInput(std::string str) const{
@@ -52,8 +50,8 @@ int		Phonebook::setIndex(std::string str) const {
 void	Phonebook::addContact(int index) {
 
 	std::cout << std::endl
-		<< "\033[36mCréation d'un contact, veuillez renseigner les différents champs."
-		<< std::endl << "ATTENTION les 3 premiers champs sont obligatoires.\033[37m"
+		<< "\033[36mTo create a contact, please fill in the different fields."
+		<< std::endl << "The first three fiels are mandatory.\033[37m"
 		<< std::endl  << "\033[33m-> First name : \033[37m";
 
 	std::string	input;
@@ -121,7 +119,8 @@ void	Phonebook::searchContact(void) const {
 void	Phonebook::printContact(int index) const {
 
 	std::cout << std::endl
-		<< "\033[36mVoici les coordonnées du contact choisi :\033[37m" << std::endl;
+		<< "\033[36mHere are the details of the chosen contact :\033[37m"
+		<< std::endl;
 	std::cout << "\033[33m- First name : \033[37m"
 		<< this->_tableContact[index - 1].getFirstName() << std::endl;
 	std::cout << "\033[33m- Last name : \033[37m"
