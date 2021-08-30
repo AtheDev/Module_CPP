@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 11:24:37 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/18 11:44:26 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/08/27 15:34:04 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	main()
 	std::string*	stringPTR = &string;
 	std::string&	stringREF = string;
 
-	std::cout << "Adresse de string : " << &string << std::endl;
-	std::cout << "Adresse de stringPTR : " << &stringPTR << std::endl;
-	std::cout << "Adresse de stringREF : " << &stringREF << std::endl;
+	std::cout << "Address string : " << &string << std::endl;
+	std::cout << "Address stringPTR : " << &stringPTR << std::endl;
+	std::cout << "Address stringREF : " << &stringREF << std::endl;
 
 	std::cout << "stringPTR : " << *stringPTR << std::endl;
 	std::cout << "stringREF : " << stringREF << std::endl;
