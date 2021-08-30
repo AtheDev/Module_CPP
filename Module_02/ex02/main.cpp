@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:39:31 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/24 14:22:41 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/08/30 16:20:22 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,23 @@ int	main(void)
 	std::cout << "***MIN***" << std::endl;
 	std::cout << "c > e => " << c << " > " << e <<" => " << Fixed::min(c, e) << std::endl;
 	std::cout << "c < e => " << c << " < " << e <<" => " << Fixed::min(c, e) << std::endl;
-	std::cout << "c > e => " << c << " > " << e <<" => " << Fixed::max(c, e) << std::endl;
-	std::cout << "c < e => " << c << " < " << e <<" => " << Fixed::max(c, e) << std::endl;
 	std::cout << "***MAX***" << std::endl;
-	std::cout << "c > e => " << c << " > " << e <<" => " << Fixed::min(c, e) << std::endl;
-	std::cout << "c < e => " << c << " < " << e <<" => " << Fixed::min(c, e) << std::endl;
 	std::cout << "c > e => " << c << " > " << e <<" => " << Fixed::max(c, e) << std::endl;
 	std::cout << "c < e => " << c << " < " << e <<" => " << Fixed::max(c, e) << std::endl;
+
+	std::cout << std::endl << "Tests comparison" << std::endl;
+	std::cout << "c > e => " << c << " > " << e <<" => " << (c > e) << std::endl;
+	std::cout << "c < e => " << c << " < " << e <<" => " << (c < e) << std::endl;
+	std::cout << "c >= e => " << c << " >= " << e <<" => " << (c >= e) << std::endl;
+	std::cout << "c <= e => " << c << " <= " << e <<" => " << (c <= e) << std::endl;
+	std::cout << "c == e => " << c << " == " << e <<" => " << (c == e) << std::endl;
+	std::cout << "c != e => " << c << " != " << e <<" => " << (c != e) << std::endl;
+	std::cout << "c > d => " << c << " > " << d <<" => " << (c > d) << std::endl;
+	std::cout << "c < d => " << c << " < " << d <<" => " << (c < d) << std::endl;
+	std::cout << "c >= d => " << c << " >= " << d <<" => " << (c >= d) << std::endl;
+	std::cout << "c <= d => " << c << " <= " << d <<" => " << (c <= d) << std::endl;
+	std::cout << "c == d => " << c << " == " << d <<" => " << (c == d) << std::endl;
+	std::cout << "c != d => " << c << " != " << d <<" => " << (c != d) << std::endl;
 
 	return 0;
 }

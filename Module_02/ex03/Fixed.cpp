@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:42:29 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/24 16:40:14 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/08/30 17:25:02 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,9 @@ int		Fixed::toInt(void) const {
 
 Fixed &	Fixed::operator=(Fixed const & rhs) {
 
-	this->_fixedPointValue = rhs.getRawBits();
+	if (this != &rhs) {
+		this->_fixedPointValue = rhs.getRawBits();
+	}
 	return (*this);
 }
 
