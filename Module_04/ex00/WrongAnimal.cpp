@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:53:02 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/03 11:59:17 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/03 14:16:12 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ WrongAnimal::~WrongAnimal(void) {
 
 WrongAnimal &	WrongAnimal::operator=(WrongAnimal const & rhs) {
 
-	this->type = rhs.type;
+	if (this != &rhs)
+		this->type = rhs.type;
 	return (*this);
 }
 

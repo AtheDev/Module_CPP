@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 10:48:56 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/03 11:46:20 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/03 14:17:00 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ Cat::~Cat(void) {
 
 Cat &	Cat::operator=(Cat const & rhs) {
 
-	this->type = rhs.type;
+	if (this != &rhs)
+		this->type = rhs.type;
 	return (*this);
 }
 

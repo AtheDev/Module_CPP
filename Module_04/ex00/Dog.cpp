@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 10:49:21 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/03 11:46:31 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/03 14:17:22 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ Dog::~Dog(void) {
 
 Dog &	Dog::operator=(Dog const & rhs) {
 
-	this->type = rhs.type;
+	if (this != &rhs)
+		this->type = rhs.type;
 	return (*this);
 }
 

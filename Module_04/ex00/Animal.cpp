@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 12:29:38 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/03 11:49:59 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/03 14:16:34 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ Animal::~Animal(void) {
 
 Animal &	Animal::operator=(Animal const & rhs) {
 
-	this->type = rhs.type;
+	if (this != &rhs)
+		this->type = rhs.type;
 	return (*this);
 }
 
