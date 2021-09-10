@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 18:13:06 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/18 10:32:30 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/10 11:06:03 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include <iostream>
 
 Zombie::Zombie(std::string name): _name(name) {
 
