@@ -6,13 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 15:22:05 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/27 14:20:11 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/10 10:41:19 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Phonebook.hpp"
-#include <iomanip>
-#include <sstream>
 
 Phonebook::Phonebook(void) {
 
