@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 18:12:57 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/18 11:12:09 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/10 15:42:48 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ZOMBIE_H
 
 # include <string>
+# include <iostream>
 
 class	Zombie {
 
