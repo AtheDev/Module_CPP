@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 18:28:06 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/19 19:07:02 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/11 15:03:09 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Karen.hpp"
-#include <iostream>
 
 Karen::Karen(void) {
 
@@ -65,6 +64,7 @@ void	Karen::info(void) {
 void	Karen::warning(void) {
 
 	std::cout << "I think I deserve to have some extra bacon for free. "
+		<< std::endl
 		<< "I’ve been coming here for years and you just started working here last month."
 		<< std::endl;
 }
