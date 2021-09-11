@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 11:17:01 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/19 15:52:46 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/11 14:38:58 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,18 +63,24 @@ int	main(int ac, char **av)
 		return (1);
 	}
 
-	// Read file and replace stringFind to stringReplace
+	// Create string tmp containing the contents of the file
 	std::string	content;
+	std::string tmpFile;
 	while (std::getline(ifs, content))
 	{
-		std::size_t	found;
-		while ((found = content.find(stringFind)) != std::string::npos)
-		{
-			content.erase(found, stringFind.length());
-			content.insert(found, stringReplace);
-		}
-		ofs << content << std::endl;
+		tmpFile += content;
+		tmpFile += "\n";
 	}
+
+	// Read file and replace stringFind to stringReplace
+	std::size_t	found = tmpFile.find(stringFind);
+	while (found != std::string::npos)
+	{
+		tmpFile.erase(found, stringFind.length());
+		tmpFile.insert(found, stringReplace);
+		found = tmpFile.find(stringFind, found + stringReplace.length());
+	}
+	ofs << tmpFile;
 
 	// Close files and clear memory allocation
 	ifs.close();
