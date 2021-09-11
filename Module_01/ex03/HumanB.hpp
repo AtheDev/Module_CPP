@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 12:02:20 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/18 16:14:46 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/11 10:14:36 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "Weapon.hpp"
 #include <string>
+# include <iostream>
 
 class	HumanB {
 
