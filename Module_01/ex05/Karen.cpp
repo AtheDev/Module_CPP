@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 16:07:46 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/19 18:20:28 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/11 14:57:44 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Karen.hpp"
-#include <iostream>
 
 Karen::Karen(void) {
 

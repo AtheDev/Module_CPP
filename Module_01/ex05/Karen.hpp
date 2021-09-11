@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 16:07:38 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/19 16:46:17 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/11 14:57:39 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define KAREN_H
 
 # include <string>
+# include <iostream>
 
 class	Karen {
 
