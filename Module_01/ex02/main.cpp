@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/18 11:24:37 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/27 15:34:04 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/11 09:27:36 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,6 @@ int	main()
 
 	std::cout << "stringPTR : " << *stringPTR << std::endl;
 	std::cout << "stringREF : " << stringREF << std::endl;
+
+	return (0);
 }
