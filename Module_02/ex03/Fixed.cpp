@@ -6,13 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:42:29 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/30 17:25:02 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/13 14:15:16 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <iostream>
-#include <cmath>
 
 Fixed::Fixed(void): _fixedPointValue(0) {
 
