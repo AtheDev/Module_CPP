@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/19 23:55:59 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/22 18:20:10 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/12 15:21:35 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FIXED_H
 
 # include <string>
+# include <iostream>
+# include <cmath>
 
 class	Fixed {
 
