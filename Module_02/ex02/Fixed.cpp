@@ -6,35 +6,38 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/24 11:42:29 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/30 17:23:59 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/13 14:04:34 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <iostream>
-#include <cmath>
 
 Fixed::Fixed(void): _fixedPointValue(0) {
 
+	std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(Fixed const & cpy) {
 
+	std::cout << "Copy constructor called" << std::endl;
 	*this = cpy;
 }
 
 Fixed::Fixed(int const value) {
 
+	std::cout << "Int constructor called" << std::endl;
 	this->_fixedPointValue = (value << _nbFractionalBits);
 }
 
 Fixed::Fixed(float const value) {
 
+	std::cout << "Float constructor called" << std::endl;
 	this->_fixedPointValue = roundf(value * (1 << _nbFractionalBits));
 }
 
 Fixed::~Fixed(void) {
 
+	std::cout << "Destructor called" << std::endl;
 }
 
 int		Fixed::getRawBits(void) const {
