@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 14:25:01 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/31 10:58:23 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/14 10:03:20 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CLAPTRAP_H
 
 # include <string>
+# include <iostream>
 
 class	ClapTrap {
 

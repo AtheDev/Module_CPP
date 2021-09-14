@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 14:25:10 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/31 16:35:59 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/14 10:11:38 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-#include <iostream>
 
 ClapTrap::ClapTrap(void): _name(""), _hitpoints(10),
 							_energyPoint(10), _attackDamage(0){
@@ -22,7 +21,7 @@ ClapTrap::ClapTrap(void): _name(""), _hitpoints(10),
 ClapTrap::ClapTrap(std::string name): _name(name), _hitpoints(10),
 										_energyPoint(10), _attackDamage(0) {
 
-	std::cout << "ClapTrap : Constructor called, " << name << " is created" << std::endl;
+	std::cout << "ClapTrap : Constructor with parameter called" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & cpy) {
