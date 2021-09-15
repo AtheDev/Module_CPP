@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 16:57:34 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/31 18:06:31 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/15 14:23:47 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-#include <iostream>
 
 ScavTrap::ScavTrap(void): ClapTrap() {
 
@@ -29,7 +28,7 @@ ScavTrap::ScavTrap(std::string name): ClapTrap(name) {
 	_attackDamage = 20;
 }
 
-ScavTrap::ScavTrap(ScavTrap const & cpy) {
+ScavTrap::ScavTrap(ScavTrap const & cpy): ClapTrap(cpy._name) {
 
 	std::cout << "ScavTrap : Copy constructor called" << std::endl;
 	*this = cpy;
@@ -42,13 +41,8 @@ ScavTrap::~ScavTrap(void) {
 
 ScavTrap &	ScavTrap::operator=(ScavTrap const & rhs) {
 
-	std::cout << "ScavTrap : Assignation operator called" << std::endl;
-	if (&rhs != this) {
-		this->_name = rhs._name;
-		this->_hitpoints = rhs._hitpoints;
-		this->_energyPoint = rhs._energyPoint;
-		this->_attackDamage = rhs._attackDamage;
-	}
+	if (&rhs != this)
+		ClapTrap::operator=(rhs);
 	return (*this);
 }
 
