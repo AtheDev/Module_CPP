@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 16:57:22 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/31 18:11:22 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/15 11:26:30 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "ClapTrap.hpp"
 # include <string>
+# include <iostream>
 
 class	ScavTrap : public ClapTrap {
 
