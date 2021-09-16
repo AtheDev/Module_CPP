@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 10:48:48 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/03 12:36:00 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/17 00:14:02 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define CAT_H
 
 # include "Animal.hpp"
+# include <iostream>
+# include <string>
 
 class	Cat: public Animal {
 

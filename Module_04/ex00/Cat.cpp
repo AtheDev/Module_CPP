@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 10:48:56 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/03 14:17:00 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/17 00:14:06 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
-#include <iostream>
 
 Cat::Cat(void): Animal() {
 

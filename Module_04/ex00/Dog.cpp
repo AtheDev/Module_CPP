@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 10:49:21 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/03 14:17:22 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/17 00:17:36 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-#include <iostream>
 
 Dog::Dog(void): Animal() {
 

@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 11:53:02 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/03 14:16:12 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/17 00:22:59 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
-#include <iostream>
 
 WrongAnimal::WrongAnimal(void) {
 
