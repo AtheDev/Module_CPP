@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 14:24:46 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/02 09:09:46 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/16 22:28:35 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,14 +139,16 @@ void	testDiamondTrap(void)
 
 int	main()
 {
-	testClapTrap();
+	// if you want to do the old test
+
+	/*testClapTrap();
 	std::cout << std::endl << std::endl;
 	testScavTrap();
 	std::cout << std::endl << std::endl;
 	testFragTrap();
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl;*/
+
 	testDiamondTrap();
-	std::cout << std::endl << std::endl;
 
 	return (0);
 }

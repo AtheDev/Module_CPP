@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 16:57:22 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/31 18:23:35 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/15 15:44:20 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "ClapTrap.hpp"
 # include <string>
+# include <iostream>
 
 class	ScavTrap : virtual public ClapTrap {
 
@@ -27,9 +28,9 @@ class	ScavTrap : virtual public ClapTrap {
 
 		ScavTrap &	operator=(ScavTrap const & rhs);
 
-		void	attack(std::string const & target) const;
+		virtual void	attack(std::string const & target) const;
 
-		void	guardGate(void) const;
+		void			guardGate(void) const;
 
 	private:
 

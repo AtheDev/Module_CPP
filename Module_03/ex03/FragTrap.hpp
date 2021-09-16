@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 12:06:58 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/02 09:07:24 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/16 22:56:45 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "ClapTrap.hpp"
 # include <string>
+# include <iostream>
 
 class	FragTrap: virtual public ClapTrap {
 
@@ -27,8 +28,8 @@ class	FragTrap: virtual public ClapTrap {
 
 		FragTrap & operator=(FragTrap const & rhs);
 
-		unsigned int	getHitpoints(void);
-		unsigned int	getAttackDamage(void);
+		unsigned int	getHitpointsSave(void) const;
+		unsigned int	getAttackDamageSave(void) const;
 
 		void	highFivesGuys(void) const;
 

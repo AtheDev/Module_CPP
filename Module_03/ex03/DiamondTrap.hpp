@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 14:25:33 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/02 10:41:41 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/15 15:44:34 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include "FragTrap.hpp"
 # include "ScavTrap.hpp"
 # include <string>
+# include <iostream>
 
 class	DiamondTrap: public FragTrap, public ScavTrap {
 
@@ -27,6 +28,8 @@ class	DiamondTrap: public FragTrap, public ScavTrap {
 		~DiamondTrap(void);
 
 		DiamondTrap &	operator=(DiamondTrap const & rhs);
+
+		void			attack(std::string const & target) const;
 
 		void			whoAmI(void) const;
 

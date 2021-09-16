@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 14:25:10 by adupuy            #+#    #+#             */
-/*   Updated: 2021/08/31 18:19:58 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/15 15:20:02 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-#include <iostream>
 
 ClapTrap::ClapTrap(void): _name(""), _hitpoints(10),
 							_energyPoint(10), _attackDamage(0){
@@ -22,7 +21,7 @@ ClapTrap::ClapTrap(void): _name(""), _hitpoints(10),
 ClapTrap::ClapTrap(std::string name): _name(name), _hitpoints(10),
 										_energyPoint(10), _attackDamage(0) {
 
-	std::cout << "ClapTrap : Constructor called, " << name << " is created" << std::endl;
+	std::cout << "ClapTrap : Constructor with parameter called" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & cpy) {
@@ -38,7 +37,6 @@ ClapTrap::~ClapTrap(void) {
 
 ClapTrap &	ClapTrap::operator=(ClapTrap const & rhs) {
 
-	std::cout << "ClapTrap : Assignation operator called" << std::endl;
 	if (this != &rhs) {
 		this->_name = rhs._name;
 		this->_hitpoints = rhs._hitpoints;
