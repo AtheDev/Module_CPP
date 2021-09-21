@@ -13,6 +13,7 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include <iostream>
+#include <string>
 
 void	testClapTrap(void)
 {
@@ -72,8 +73,10 @@ void	testScavTrap(void)
 
 int	main()
 {
-	testClapTrap();
-	std::cout << std::endl << std::endl;
+	// if you want to do the old test
+
+	/*testClapTrap();
+	std::cout << std::endl << std::endl;*/
 	testScavTrap();
 	std::cout << std::endl << std::endl;
 

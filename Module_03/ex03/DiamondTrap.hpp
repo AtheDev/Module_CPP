@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 14:25:33 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/15 15:44:34 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/16 23:32:32 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class	DiamondTrap: public FragTrap, public ScavTrap {
 
 		DiamondTrap &	operator=(DiamondTrap const & rhs);
 
-		void			attack(std::string const & target) const;
+		void			attack(std::string const & target);
 
 		void			whoAmI(void) const;
 

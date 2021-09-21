@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/31 14:25:42 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/16 22:58:43 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/16 23:38:50 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ DiamondTrap::~DiamondTrap(void) {
 
 DiamondTrap &	DiamondTrap::operator=(DiamondTrap const & rhs) {
 
-	std::cout << "DiamondTrap : Assignation operator called" << std::endl;
 	if (&rhs != this) {
 		ClapTrap::operator=(rhs);
 		this->_name = rhs._name;
@@ -53,7 +52,7 @@ DiamondTrap &	DiamondTrap::operator=(DiamondTrap const & rhs) {
 	return (*this);
 }
 
-void	DiamondTrap::attack(std::string const & target) const {
+void	DiamondTrap::attack(std::string const & target) {
 
 	this->ScavTrap::attack(target);
 }

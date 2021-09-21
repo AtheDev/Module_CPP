@@ -46,7 +46,7 @@ ScavTrap &	ScavTrap::operator=(ScavTrap const & rhs) {
 	return (*this);
 }
 
-void	ScavTrap::attack(std::string const & target) const {
+void	ScavTrap::attack(std::string const & target) {
 
 	std::cout << "ScavTrap " << this->_name
 				<< " attack " << target

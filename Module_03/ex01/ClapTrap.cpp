@@ -56,7 +56,7 @@ unsigned int	ClapTrap::getAttackDamage(void) const {
 	return (this->_attackDamage);
 }
 
-void	ClapTrap::attack(std::string const & target) const {
+void	ClapTrap::attack(std::string const & target) {
 
 	std::cout << "ClapTrap " << this->_name
 				<< " attack " << target
@@ -64,14 +64,14 @@ void	ClapTrap::attack(std::string const & target) const {
 				<< " points of damage !" << std::endl;
 }
 
-void	ClapTrap::takeDamage(unsigned int amount) const {
+void	ClapTrap::takeDamage(unsigned int amount) {
 
 	std::cout << "ClapTrap " << this->_name
 				<< " take damage and loses " << amount
 				<< " hitpoints !"  << std::endl;
 }
 
-void	ClapTrap::beRepaired(unsigned int amount) const {
+void	ClapTrap::beRepaired(unsigned int amount) {
 
 	std::cout << "ClapTrap " << this->_name
 				<< " be repaired and gets " << amount

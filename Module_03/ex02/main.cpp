@@ -14,6 +14,7 @@
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
 #include <iostream>
+#include <string>
 
 void	testClapTrap(void)
 {
@@ -101,10 +102,12 @@ void	testFragTrap(void)
 
 int	main()
 {
-	testClapTrap();
+	// if you want to do the old test
+
+	/*testClapTrap();
 	std::cout << std::endl << std::endl;
 	testScavTrap();
-	std::cout << std::endl << std::endl;
+	std::cout << std::endl << std::endl;*/
 	testFragTrap();
 	std::cout << std::endl << std::endl;
 

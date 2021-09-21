@@ -15,6 +15,7 @@
 #include "FragTrap.hpp"
 #include "DiamondTrap.hpp"
 #include <iostream>
+#include <string>
 
 void	testClapTrap(void)
 {
