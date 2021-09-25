@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 10:48:48 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/07 17:29:40 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/17 11:35:27 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include "Animal.hpp"
 # include "Brain.hpp"
+# include <iostream>
+# include <string>
 
 class	Cat: public Animal {
 

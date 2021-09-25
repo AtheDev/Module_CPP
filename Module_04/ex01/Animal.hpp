@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 12:25:36 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/07 16:20:54 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/17 11:35:33 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define ANIMAL_H
 
 # include <string>
+# include <iostream>
 
 class	Animal {
 

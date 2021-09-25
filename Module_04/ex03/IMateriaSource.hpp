@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 10:49:14 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/17 11:35:37 by adupuy           ###   ########.fr       */
+/*   Created: 2021/09/08 15:29:02 by adupuy            #+#    #+#             */
+/*   Updated: 2021/09/09 12:23:10 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-# define DOG_H
+#ifndef IMATERIASOURCE_H
+# define IMATERIASOURCE_H
 
-# include "Animal.hpp"
-# include "Brain.hpp"
-# include <iostream>
+# include "AMateria.hpp"
 # include <string>
 
-class	Dog: public Animal {
+class IMateriaSource {
 
 	public:
 
-		Dog(void);
-		Dog(Dog const & cpy);
-		virtual ~Dog(void);
+		virtual ~IMateriaSource() {}
 
-		Dog &	operator=(Dog const & rhs);
-
-		virtual void	makeSound(void) const;
-
-		virtual void	setIdeas(std::string const idea, int i);
-		virtual void	printIdeas(void) const;
-
-	private:
-
-		Brain *_brain;
-
+		virtual void		learnMateria(AMateria*) = 0;
+		virtual AMateria*	createMateria(std::string const & type) = 0;
 };
 
 #endif

@@ -1,41 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 10:49:14 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/17 11:35:37 by adupuy           ###   ########.fr       */
+/*   Created: 2021/09/08 14:20:36 by adupuy            #+#    #+#             */
+/*   Updated: 2021/09/09 13:14:40 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_H
-# define DOG_H
+#ifndef CURE_H
+# define CURE_H
 
-# include "Animal.hpp"
-# include "Brain.hpp"
-# include <iostream>
+# include "AMateria.hpp"
+# include "ICharacter.hpp"
 # include <string>
+# include <iostream>
 
-class	Dog: public Animal {
+class	Cure: public AMateria {
 
 	public:
 
-		Dog(void);
-		Dog(Dog const & cpy);
-		virtual ~Dog(void);
+		Cure(void);
+		virtual ~Cure(void);
 
-		Dog &	operator=(Dog const & rhs);
-
-		virtual void	makeSound(void) const;
-
-		virtual void	setIdeas(std::string const idea, int i);
-		virtual void	printIdeas(void) const;
-
+		virtual AMateria*	clone(void) const;
+		virtual void		use(ICharacter& target);
+	
 	private:
-
-		Brain *_brain;
+		Cure &	operator=(Cure const & rhs);
+		Cure(Cure const & cpy);
 
 };
 

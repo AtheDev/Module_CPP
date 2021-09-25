@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-#include <iostream>
 
 Dog::Dog(void): Animal() {
 
@@ -55,6 +54,6 @@ void	Dog::setIdeas(std::string const idea, int i) {
 
 void	Dog::printIdeas(void) const {
 
-	for (int i = 0; i < SIZE_TAB_IDEAS; i++)
+	for (int i = 0; !this->_brain->getIdeas(i).empty(); i++)
 		std::cout << "			- " << this->_brain->getIdeas(i) << std::endl;
 }

@@ -14,6 +14,7 @@
 # define ANIMAL_H
 
 # include <string>
+# include <iostream>
 
 class	Animal {
 

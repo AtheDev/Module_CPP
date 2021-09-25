@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/02 12:29:38 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/07 16:21:20 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/17 11:35:50 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include <iostream>
 
 Animal::Animal(void) {
 

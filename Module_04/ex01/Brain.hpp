@@ -6,7 +6,7 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:50:58 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/07 16:05:31 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/17 09:47:29 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # define NB_IDEAS 100
 # define SIZE_TAB_IDEAS 10
 # include <string>
+# include <iostream>
 
 class	Brain {
 

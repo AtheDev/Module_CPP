@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include <iostream>
 
 Animal::Animal(void) {
 

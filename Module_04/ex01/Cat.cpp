@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 10:48:56 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/07 17:21:11 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/17 18:44:59 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
-#include <iostream>
 
 Cat::Cat(void): Animal() {
 
@@ -55,6 +54,6 @@ void	Cat::setIdeas(std::string const idea, int i) {
 
 void	Cat::printIdeas(void) const {
 
-	for (int i = 0; i < SIZE_TAB_IDEAS; i++)
+	for (int i = 0; !this->_brain->getIdeas(i).empty(); i++)
 		std::cout << "			- " << this->_brain->getIdeas(i) << std::endl;
 }

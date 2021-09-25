@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 13:50:58 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/07 16:05:31 by adupuy           ###   ########.fr       */
+/*   Created: 2021/09/08 14:20:59 by adupuy            #+#    #+#             */
+/*   Updated: 2021/09/09 13:20:13 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_H
-# define BRAIN_H
+#include "Ice.hpp"
 
-# define NB_IDEAS 100
-# define SIZE_TAB_IDEAS 10
-# include <string>
-# include <iostream>
+Ice::Ice(void): AMateria("ice") {
 
-class	Brain {
+	std::cout << "Ice : Default constructor called" << std::endl;
+}
 
-	public:
+Ice::~Ice(void) {
 
-		Brain(void);
-		Brain(Brain const & cpy);
-		~Brain(void);
+	std::cout << "Ice : Destructor called" << std::endl;
+}
 
-		Brain &	operator=(Brain const & rhs);
+AMateria *	Ice::clone(void) const {
 
-		std::string	getIdeas(int i) const;
-		void		setIdeas(std::string const idea, int i);
+	return (new Ice());
+}
 
-	private:
+void			Ice::use(ICharacter & target) {
 
-		std::string	_ideas[NB_IDEAS];
-
-};
-
-#endif
+	std::cout << "* shoot an ice bolt at " << target.getName() << " *" << std::endl;
+}

@@ -1,40 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/03 13:50:58 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/07 16:05:31 by adupuy           ###   ########.fr       */
+/*   Created: 2021/09/08 11:29:07 by adupuy            #+#    #+#             */
+/*   Updated: 2021/09/09 13:18:19 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_H
-# define BRAIN_H
+#ifndef AMATERIA_H
+# define AMATERIA_H
 
-# define NB_IDEAS 100
-# define SIZE_TAB_IDEAS 10
+# include "ICharacter.hpp"
 # include <string>
 # include <iostream>
 
-class	Brain {
+class AMateria {
+
+	protected:
+
+		std::string	type;
 
 	public:
 
-		Brain(void);
-		Brain(Brain const & cpy);
-		~Brain(void);
+		AMateria(void);
+		AMateria(std::string const & type);
+		virtual ~AMateria(void);
 
-		Brain &	operator=(Brain const & rhs);
+		std::string const & getType() const; //Returns the materia type
 
-		std::string	getIdeas(int i) const;
-		void		setIdeas(std::string const idea, int i);
+		virtual AMateria* clone() const = 0;
+		virtual void use(ICharacter& target);
 
 	private:
 
-		std::string	_ideas[NB_IDEAS];
-
+		AMateria(AMateria const & cpy);
+		AMateria &	operator=(AMateria const & rhs);
 };
 
 #endif

@@ -6,12 +6,11 @@
 /*   By: adupuy <adupuy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/03 13:52:38 by adupuy            #+#    #+#             */
-/*   Updated: 2021/09/03 17:58:15 by adupuy           ###   ########.fr       */
+/*   Updated: 2021/09/17 09:47:32 by adupuy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Brain.hpp"
-#include <iostream>
 
 Brain::Brain(void) {
 
