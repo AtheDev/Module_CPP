@@ -18,7 +18,7 @@
 #include <string>
 #include <cstdlib>
 
-Base *  generate(void)      // génère aléatoirement une instance A ou B ou C
+Base *  generate(void)
 {
 
     srand(time(NULL));

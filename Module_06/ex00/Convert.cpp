@@ -37,7 +37,6 @@ bool        Convert::_checkValue(std::string stdValue, char * value) {
     {
         this->_type = T_CHAR;
         this->_value = static_cast<double>(value[0]);
-        return 0;
     }
     else
     {
@@ -76,7 +75,6 @@ bool        Convert::_checkValue(std::string stdValue, char * value) {
             return 1;
         if (this->_sign == 0 && (tmpV.compare("inf") == 0 || tmpV.compare("inff") == 0))
             return 1;
-        return 0;
     }
     return 0;
 }
@@ -86,12 +84,12 @@ void            Convert::_checkDec(std::string stdValue, char * value, char c, s
     for (; i < stdValue.length(); i++)
     {
         if (value[i] == c)
+            break;
+        if (value[i] != '0')
         {
             this->_dec = 1;
             break;
         }
-        if (value[i] != '0')
-            break;
     }
 }
 
@@ -115,7 +113,8 @@ const char *    Convert::ExceptionConvert::what() const throw() {
 void        Convert::_printChar(void) const {
 
     std::cout << "char: ";
-    if (this->_type == T_PSEUDO || this->_type == T_FLOAT_PSEUDO)
+    if (this->_type == T_PSEUDO || this->_type == T_FLOAT_PSEUDO
+        || static_cast<int>(this->getValue()) < CHAR_MIN || static_cast<int>(this->getValue()) > CHAR_MAX)
         std::cout << "impossible" << std::endl;
     else if (static_cast<char>(this->getValue()) < 32 || static_cast<char>(this->getValue()) > 126)
         std::cout << "Non displayable" << std::endl;
@@ -126,7 +125,8 @@ void        Convert::_printChar(void) const {
 void        Convert::_printInt(void) const {
 
     std::cout << "int: ";
-    if (this->_type == T_PSEUDO || this->_type == T_FLOAT_PSEUDO)
+    if (this->_type == T_PSEUDO || this->_type == T_FLOAT_PSEUDO
+        || static_cast<long>(this->getValue()) < INT_MIN || static_cast<long>(this->getValue()) > INT_MAX)
         std::cout << "impossible" << std::endl;
     else
         std::cout << static_cast<int>(this->getValue()) << std::endl;
@@ -137,12 +137,20 @@ void        Convert::_printFloat(void) const {
 
     std::cout << "float: ";
     if (this->_type == T_INT || this->_type == T_CHAR || this->_type == T_FLOAT)
-        std::cout << static_cast<float>(this->getValue()) << ".0f" << std::endl;
+    {
+        if (static_cast<float>(this->getValue()) < -FLT_MAX || static_cast<float>(this->getValue()) > FLT_MAX)
+            std::cout << "impossible" << std::endl;
+        else
+            std::cout << static_cast<float>(this->getValue()) << ".0f" << std::endl;
+    }
     else
     {
         if ((this->_type == T_PSEUDO || this->_type == T_FLOAT_PSEUDO) && this->_sign == PLUS)
             std::cout << "+";
-        if (this->_dec == 1)
+        if ((static_cast<float>(this->getValue()) < -FLT_MAX || static_cast<float>(this->getValue()) > FLT_MAX)
+            && (this->_type != T_PSEUDO && this->_type != T_FLOAT_PSEUDO))
+            std::cout << "impossible" << std::endl;
+        else if (this->_dec == 0 && (this->_type != T_PSEUDO && this->_type != T_FLOAT_PSEUDO))
             std::cout << static_cast<float>(this->getValue()) << ".0f" << std::endl;
         else
             std::cout << static_cast<float>(this->getValue()) << "f" << std::endl;
@@ -153,14 +161,21 @@ void        Convert::_printDouble(void) const {
 
     std::cout << "double: ";
     if (this->_type == T_INT || this->_type == T_CHAR || this->_type == T_FLOAT)
-        std::cout << static_cast<double>(this->getValue()) << ".0" << std::endl;
+    {
+        if (this->getValue() < -DBL_MAX || this->getValue() > DBL_MAX)
+            std::cout << "impossible" << std::endl;
+        else
+            std::cout << this->getValue() << ".0" << std::endl;
+    }
     else
     {
         if ((this->_type == T_PSEUDO || this->_type == T_FLOAT_PSEUDO) && this->_sign == PLUS)
             std::cout << "+";
-        if (this->_dec == 1)
-            std::cout << static_cast<double>(this->getValue()) << ".0" << std::endl;
+        if ((this->getValue() < -DBL_MAX || this->getValue() > DBL_MAX) && (this->_type != T_PSEUDO && this->_type != T_FLOAT_PSEUDO))
+            std::cout << "impossible" << std::endl;
+        else if (this->_dec == 0 && (this->_type != T_PSEUDO && this->_type != T_FLOAT_PSEUDO))
+            std::cout << this->getValue() << ".0" << std::endl;
         else
-            std::cout << static_cast<double>(this->getValue()) << std::endl;
+            std::cout << this->getValue() << std::endl;
     }
 }

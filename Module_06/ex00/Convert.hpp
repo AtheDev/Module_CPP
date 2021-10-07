@@ -17,6 +17,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
+#include <climits>
+#include <cfloat>
 
 class   Convert {
 
